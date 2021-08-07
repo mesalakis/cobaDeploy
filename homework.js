@@ -1,24 +1,24 @@
 const express = require("express");
 const { stringify } = require("querystring");
-
+const port = process.env.PORT || 3000;
 const app = express();
-const port = 3000;
 
-// // ** exercise 10
-// app.get("/profile", (req, res) => {
-//     const profile = [
-//         {
-//             "name": "Sandra",
-//             "height": 1.57,
-//             "weight": 49,
-//         }];
+// ** exercise 10
+app.get("/profile", (req, res) => {
+  const profile = [
+    {
+      name: "Sandra",
+      height: 1.57,
+      weight: 49,
+    },
+  ];
 
-//     res.json(profile);
-// });
+  res.json(profile);
+});
 
-// app.listen(port, () => {
-//     console.log(`app listening at http://localhost:${port}`);
-// });
+app.listen(port, () => {
+  console.log(`app listening at http://localhost:${port}`);
+});
 
 // ** execercise 11
 
